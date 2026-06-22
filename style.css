@@ -1,19 +1,64 @@
-/* --- BODY --- */
-body {
-    font-family: Arial, sans-serif;
-    max-width: 768px;
-    margin: 0 auto;
-    padding: 20px;
-    line-height: 1.6;
-    background: #f9f9f9;
+/* ====== GLOBAL ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* --- HEADER --- */
-header {
-    background: #f4f4f4;
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
+    background: #e8e8ec;
+    color: #2c2c2e;
+}
+
+/* ====== NAVIGASI ====== */
+nav {
+    background: #2c2c2e;
+    padding: 15px 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #d1d1d6;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background: #8e8e93;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ====== HEADER ====== */
+header {
+    background: #f5f5f7;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    margin-bottom: 25px;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #1c1c1e;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #8e8e93;
+    font-size: 1.1em;
 }
 
 header img {
@@ -21,77 +66,134 @@ header img {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 4px solid #a94588;
-    margin: 10px 0;
+    border: 4px solid #c7c7cc;
+    margin-bottom: 15px;
 }
 
-/* --- NAVIGASI --- */
-nav {
-    background: #1a1a2e;
-    padding: 15px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background: #a94588;
-    color: white;
-}
-
-/* --- SECTION --- */
+/* ====== SECTION ====== */
 section {
-    margin: 30px 0;
-    padding: 15px;
-    background: white;
-    border-left: 5px solid #a94588;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 5px;
+    background: #f5f5f7;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+    border-left: 5px solid #8e8e93;
     scroll-margin-top: 20px;
 }
 
-/* --- FOOTER --- */
-footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #a7a7a7;
-    margin-top: 30px;
-    padding: 20px;
-    border-radius: 5px;
-    background: #f4f4f4;
-    border: 4px solid #a94588;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+section h2 {
+    color: #1c1c1e;
+    margin-bottom: 15px;
+    font-size: 1.5em;
 }
 
-/* --- TOMBOL --- */
+section h3 {
+    color: #636366;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+section ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e5ea;
+    color: #3a3a3c;
+}
+
+section ul li:last-child {
+    border-bottom: none;
+}
+
+/* ====== KONTAK ====== */
+section a {
+    color: #636366;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section a:hover {
+    color: #1c1c1e;
+    text-decoration: underline;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f7;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    margin-top: 20px;
+}
+
+footer p {
+    color: #8e8e93;
+    font-size: 0.9em;
+}
+
 footer button {
-    background: #a94588;
+    background: #636366;
     color: white;
     border: none;
-    padding: 15px 25px;
-    border-radius: 5px;
+    padding: 12px 30px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px;
     transition: 0.3s;
+    font-weight: 600;
 }
 
 footer button:hover {
-    background: #8a3a70;
+    background: #3a3a3c;
     transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(44, 44, 46, 0.3);
 }
 
-/* --- RESPONSIVE (BIAR BISA DI HP) --- */
-@media (max-width: 680px) {
+/* ====== ANIMASI FADE-IN ====== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section, header, footer {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ====== EFEK HOVER CARD ====== */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+/* ====== EFEK TOMBOL BERKILAU ====== */
+footer button {
+    position: relative;
+    overflow: hidden;
+}
+
+footer button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(45deg);
+    transition: 0.5s;
+}
+
+footer button:hover::after {
+    left: 100%;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 600px) {
     nav a {
         display: block;
         margin: 5px 0;
@@ -101,8 +203,16 @@ footer button:hover {
         padding: 10px;
     }
 
+    header h1 {
+        font-size: 1.5em;
+    }
+
     header img {
         width: 100px;
         height: 100px;
+    }
+
+    section {
+        padding: 15px;
     }
 }

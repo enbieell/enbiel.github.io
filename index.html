@@ -12,14 +12,14 @@
         <a href="#home">Home</a>
         <a href="#about">Tentang</a>
         <a href="#projects">Proyek</a>
+        <a href="#hobi">Hobi</a>   <!-- ⬅️ TAMBAHKAN INI -->
         <a href="#contact">Kontak</a>
     </nav>
 
     <!-- ====== HEADER ====== -->
     <header>
         <h1>Halo, Saya Salman</h1>
-        <!-- ⬇️ FOTO DI SINI ⬇️ -->
-        <img src="https://avatars.githubusercontent.com/enbieell" alt="Foto Salman" style="border-radius:50%; width:150px; height:150px;">
+        <img src="https://ui-avatars.com/api/?name=Salman&background=636366&color=fff&size=150" alt="Foto Salman" style="border-radius:50%; width:150px; height:150px;">
         <p>Seorang programmer yang sedang belajar membangun web</p>
     </header>
 
@@ -35,25 +35,62 @@
     </section>
 
     <!-- ====== PROYEK ====== -->
-    <section id="projects">
-        <h2>Proyek</h2>
-        <ul>
-            <li>Website portofolio ini</li>
-            <li>(akan diisi proyek Anda berikutnya)</li>
-        </ul>
-    </section>
+<section id="projects">
+    <h2>Proyek</h2>
+    <ul>
+        <li>Website portofolio ini</li>
+        <li>(akan diisi proyek Anda berikutnya)</li>
+    </ul>
+</section>
 
-    <!-- ====== KONTAK ====== -->
-    <section id="contact">
-        <h2>Kontak</h2>
-        <p>Email: salmannabilahsan9@gmail.com
-        <p>GitHub: <a href="https://github.com/enbieell" target="_blank">github.com/enbieell</a></p>
+<!-- ====== HOBI ====== -->
+<section id="hobi">
+    <h2>Hobi Saya</h2>
+    <ul>
+        <li>Coding</li>
+        <li>Membaca buku</li>
+        <li>Olahraga</li>
+    </ul>
+</section>
+
+<!-- ====== KONTAK ====== -->
+<section id="contact">
+    <h2>Kontak</h2>
+    <ul>
+        <li>Telepon: 0812345678</li>
+        <li>Email: info@example.com</li>
+    </ul>
+</section>
+
+    <!-- ====== GUEST BOOK ====== -->
+    <section id="guestbook">
+        <h2>📖 Buku Tamu</h2>
+
+        <!-- Form untuk menulis pesan -->
+        <form id="form-tamu" style="margin-bottom: 20px;">
+            <div style="margin-bottom: 10px;">
+                <input type="text" id="nama-tamu" placeholder="Nama Anda" required
+                       style="width: 100%; padding: 10px; border: 1px solid #e5e5ea; border-radius: 8px; font-size: 16px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <textarea id="pesan-tamu" placeholder="Tulis pesan..." required
+                          style="width: 100%; padding: 10px; border: 1px solid #e5e5ea; border-radius: 8px; font-size: 16px; resize: vertical; min-height: 80px; box-sizing: border-box;"></textarea>
+            </div>
+            <button type="submit" style="background: #636366; color: white; border: none; padding: 10px 25px; border-radius: 8px; cursor: pointer; font-size: 16px;">
+                Kirim Pesan ✉️
+            </button>
+        </form>
+
+        <!-- Tempat daftar pesan -->
+        <div id="daftar-pesan"></div>
     </section>
 
     <!-- ====== FOOTER ====== -->
     <footer>
-        <p>© 2026 - Dibuat dengan semangat belajar</p>
+        <p>© 2026 - Dibuat Oleh Salman</p>
         <button onclick="alert('Terima kasih sudah berkunjung!')">Klik Saya</button>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
